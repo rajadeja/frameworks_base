@@ -32,6 +32,18 @@
     <!-- Name of that alternative key handler class -->
     <string name="config_alternativeDeviceKeyHandlerClass" translatable="false"></string>
 
+    <!-- Path to the a single custom key handler library -->
+    <string name="config_customKeyHandlerLib" translatable="false">
+    </string>
+
+    <!-- Name of the key handler class in the custom key handler library -->
+    <string name="config_customKeyHandlerClass" translatable="false">
+    </string>
+
+    <!-- make sure you enable this only if your device supports deep slepp
+    with active proximity sensor event listener -->
+    <bool name="config_proxiSensorWakupCheck">false</bool>
+
     <!-- Default value for proximity check on screen wake
          NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)
     -->
