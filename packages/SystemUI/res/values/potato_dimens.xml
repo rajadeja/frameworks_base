@@ -20,7 +20,7 @@
     <dimen name="net_traffic_txt_img_padding">2dp</dimen>
 
     <!-- Sets a custom extra padding for the QS icons and statusbar date -->
-	<dimen name="qs_items_padding">8dp</dimen>
+    <dimen name="qs_items_padding">8dp</dimen>
 
     <!-- OPA -->
     <dimen name="halo_diameter">18.0dip</dimen>
@@ -32,7 +32,7 @@
     <dimen name="opa_line_x_trans_ry">15.0dip</dimen>
     <dimen name="opa_line_y_translation">16.0dip</dimen>
 
-   <dimen name="net_sbtraffic_multi_text_size">13dp</dimen>
-   <dimen name="net_sbtraffic_txt_img_padding">1dp</dimen>
+    <dimen name="net_sbtraffic_multi_text_size">10dp</dimen>
+    <dimen name="net_sbtraffic_txt_img_padding">1dp</dimen>
 
 </resources>
