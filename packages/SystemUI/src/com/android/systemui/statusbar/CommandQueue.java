@@ -1142,6 +1142,8 @@ public class CommandQueue extends IStatusBar.Stub implements CallbackController<
                 case MSG_HIDE_IN_DISPLAY_FINGERPRINT_VIEW:
                     for (int i = 0; i < mCallbacks.size(); i++) {
                         mCallbacks.get(i).hideInDisplayFingerprintView();
+                    }
+                    break;
                 case MSG_PARTIAL_SCREENSHOT_ACTIVE:
                     for (int i = 0; i < mCallbacks.size(); i++) {
                         mCallbacks.get(i).setPartialScreenshot((Boolean) msg.obj);
