@@ -26,6 +26,8 @@ import android.bluetooth.BluetoothUuid;
 import android.content.Context;
 import android.os.ParcelUuid;
 import android.util.Log;
+import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.android.settingslib.R;
 
@@ -283,9 +285,13 @@ public class A2dpProfile implements LocalBluetoothProfile {
                index = 2;
                break;
            case BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX:
+                String toastText = mContext.getString(R.string.aptx_connected_toast);
+                Toast.makeText(mContext, toastText, Toast.LENGTH_SHORT).show();
                index = 3;
                break;
            case BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX_HD:
+                toastText = mContext.getString(R.string.aptx_hd_connected_toast);
+                Toast.makeText(mContext, toastText, Toast.LENGTH_SHORT).show();
                index = 4;
                break;
            case BluetoothCodecConfig.SOURCE_CODEC_TYPE_LDAC:
