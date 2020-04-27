@@ -401,7 +401,6 @@ public class BatteryMeterView extends LinearLayout implements
                     mBatteryPercentView.setTextAppearance(mPercentageStyleId);
                 }
                 if (mTextColor != 0) mBatteryPercentView.setTextColor(mTextColor);
-                updatePercentText();
                 addView(mBatteryPercentView,
                         new ViewGroup.LayoutParams(
                                 LayoutParams.WRAP_CONTENT,
@@ -544,11 +543,11 @@ public class BatteryMeterView extends LinearLayout implements
             super.onChange(selfChange, uri);
             updateShowPercent();
             updateSettings();
-            if (TextUtils.equals(uri.getLastPathSegment(),
+            /*if (TextUtils.equals(uri.getLastPathSegment(),
                     Settings.Global.BATTERY_ESTIMATES_LAST_UPDATE_TIME)) {
                 // update the text for sure if the estimate in the cache was updated
                 updatePercentText();
-            }
+            }*/ //updatePercentText gets called always by updateShowPercent
         }
     }
 
