@@ -18,9 +18,12 @@ package com.android.internal.util.potato;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.hardware.input.InputManager;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Looper;
@@ -37,6 +40,9 @@ import android.os.UserHandle;
 
 import com.android.internal.R;
 
+import static android.hardware.Sensor.TYPE_LIGHT;
+import static android.hardware.Sensor.TYPE_PROXIMITY;
+
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 
@@ -46,6 +52,21 @@ import com.android.internal.statusbar.IStatusBarService;
  * Some custom utilities
  */
 public class PotatoUtils {
+
+   /**
+     * @hide
+     */
+    public static final String SYSTEMUI_PACKAGE_NAME = "com.android.systemui";
+
+    /**
+     * @hide
+     */
+    public static final String ACTION_DISMISS_KEYGUARD = SYSTEMUI_PACKAGE_NAME +".ACTION_DISMISS_KEYGUARD";
+
+    /**
+     * @hide
+     */
+    public static final String DISMISS_KEYGUARD_EXTRA_INTENT = "launch";
 
     // Check to see if device is WiFi only
     public static boolean isWifiOnly(Context context) {

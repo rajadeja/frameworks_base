@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.android.internal.util.aicp;
+package com.android.internal.util.potato;
 
 import android.content.Context;
 import android.media.AudioAttributes;
@@ -26,7 +26,7 @@ import android.provider.Settings;
 import android.provider.Settings.Global;
 import android.view.HapticFeedbackConstants;
 
-public class AicpVibe{
+public class PotatoHaptic{
 
 
     // Vibrator pattern for haptic feedback of a long press.
@@ -38,7 +38,7 @@ public class AicpVibe{
     // Vibrator pattern for haptic feedback during boot when safe mode is enabled.
     private static long[] mSafeModeEnabledVibePattern;
 
-    public static void AicpVibe(){
+    public static void PotatoHaptic(){
     }
 
     public static boolean performHapticFeedbackLw(int effectId, boolean always, Context mContext, String settingsVariable, int vibrDuration) {
